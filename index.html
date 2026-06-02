@@ -11,18 +11,15 @@
   <meta property="og:description" content="We build secure systems, automate operations, and turn data into decisions for ambitious African businesses.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nyooti.github.io/ornest_developers/">
-  <meta property="og:image" content="https://nyooti.github.io/ornest_developers/web-development-word.webp">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image" content="https://nyooti.github.io/ornest_developers/logo.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ornest Developers – Software, Cybersecurity & Data Solutions">
   <meta name="twitter:description" content="We build secure systems, automate operations, and turn data into decisions for ambitious African businesses.">
-  <meta name="twitter:image" content="https://nyooti.github.io/ornest_developers/web-development-word.webp">
+  <meta name="twitter:image" content="https://nyooti.github.io/ornest_developers/logo.png">
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<canvas id="particles-canvas"></canvas>
 
 <header>
   <div class="container header-inner">
@@ -33,9 +30,8 @@
     <nav id="nav-menu">
       <a href="#services">Services</a>
       <a href="#industries">Industries</a>
-      <a href="#work">Case Studies</a>
+      <a href="#work">Work</a>
       <a href="#about">About</a>
-      <a href="#why-choose">Why Us</a>
       <a href="#contact">Contact</a>
     </nav>
     <button class="menu-toggle" id="menuToggle" aria-label="Menu">
@@ -45,32 +41,50 @@
 </header>
 
 <section id="top" class="hero">
-  <div class="hero-carousel" aria-hidden="true">
-    <img class="hero-slide active" src="web-development-word.webp" alt="">
-    <img class="hero-slide" src="software-development.webp" alt="">
-    <img class="hero-slide" src="DevSecOps Engineer 2.webp" alt="">
-    <img class="hero-slide" src="Cybersecurity Analyst 3.webp" alt="">
-    <img class="hero-slide" src="data analytics 4.webp" alt="">
-  </div>
-  <div class="hero-overlay"></div>
+  <div class="hero-bg"></div>
+  <canvas id="particles-canvas"></canvas>
   <div class="container hero-content">
-    <p class="hero-badge">Software. Security. Data. Cloud.</p>
-    <h1 id="typed-text">We build systems that grow your business</h1>
-    <p class="hero-sub">Ornest Developers partners with African businesses to design, build, secure, and scale modern digital products — from web platforms and mobile apps to cybersecurity and data intelligence.</p>
-    <div class="hero-buttons">
-      <a href="#contact" class="btn btn-primary">Start a Project</a>
-      <a href="#services" class="btn btn-outline">Explore Services</a>
+    <div class="hero-text">
+      <p class="hero-badge">Software. Security. Data. Cloud.</p>
+      <h1 id="typed-text">We build systems that grow your business</h1>
+      <p class="hero-sub">Ornest Developers partners with African businesses to design, build, secure, and scale modern digital products — from web platforms and mobile apps to cybersecurity and data intelligence.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Start a Project</a>
+        <a href="#services" class="btn btn-outline">Explore Services</a>
+      </div>
     </div>
-    <div class="hero-proof" aria-label="Company highlights">
-      <span>Custom business systems</span>
-      <span>Cybersecurity-first delivery</span>
-      <span>Cloud-ready architecture</span>
-      <span>African market expertise</span>
+    <div class="hero-showcase">
+      <div class="showcase-carousel" id="heroCarousel">
+        <div class="showcase-track" id="heroTrack">
+          <div class="showcase-slide" style="background-image: url('software-development.webp')">
+            <div class="showcase-label">Web & App Development</div>
+          </div>
+          <div class="showcase-slide" style="background-image: url('Cybersecurity Analyst 3.webp')">
+            <div class="showcase-label">Cybersecurity</div>
+          </div>
+          <div class="showcase-slide" style="background-image: url('data analytics 4.webp')">
+            <div class="showcase-label">Data Analytics</div>
+          </div>
+          <div class="showcase-slide" style="background-image: url('DevSecOps Engineer 2.webp')">
+            <div class="showcase-label">Cloud & DevOps</div>
+          </div>
+          <div class="showcase-slide" style="background-image: url('web-development-word.webp')">
+            <div class="showcase-label">Web Design</div>
+          </div>
+        </div>
+        <button class="showcase-btn showcase-prev" aria-label="Previous slide">&lsaquo;</button>
+        <button class="showcase-btn showcase-next" aria-label="Next slide">&rsaquo;</button>
+        <div class="showcase-dots" id="heroDots"></div>
+      </div>
     </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
   </div>
 </section>
 
-<section id="services" class="section services-section">
+<section id="services" class="section">
   <div class="container">
     <div class="section-header fade-in">
       <span class="section-tag">What We Deliver</span>
@@ -139,46 +153,70 @@
     </div>
     <div class="industries-grid">
       <div class="industry-card fade-in">
-        <div class="industry-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm0 2.84l5.72 3.11L12 12.06 6.28 8.95 12 5.84zM5 15.18l2.1-1.15L12 16.94l4.9-2.91L19 15.18v-2.36L12 18.5l-7-3.68v2.36z" fill="currentColor"/></svg>
+        <div class="industry-bg" style="background-image: url('education.webp')"></div>
+        <div class="industry-overlay"></div>
+        <div class="industry-content">
+          <div class="industry-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm0 2.84l5.72 3.11L12 12.06 6.28 8.95 12 5.84zM5 15.18l2.1-1.15L12 16.94l4.9-2.91L19 15.18v-2.36L12 18.5l-7-3.68v2.36z" fill="currentColor"/></svg>
+          </div>
+          <h3>Education</h3>
+          <p>School management systems, e-learning portals, student information systems, and academic analytics platforms.</p>
         </div>
-        <h3>Education</h3>
-        <p>School management systems, e-learning portals, student information systems, and academic analytics platforms.</p>
       </div>
       <div class="industry-card fade-in">
-        <div class="industry-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 11h4v10H3V11zm7-6h4v16h-4V5zm7 4h4v12h-4V9z" fill="currentColor"/></svg>
+        <div class="industry-bg" style="background-image: url('finance and banking.webp')"></div>
+        <div class="industry-overlay"></div>
+        <div class="industry-content">
+          <div class="industry-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 11h4v10H3V11zm7-6h4v16h-4V5zm7 4h4v12h-4V9z" fill="currentColor"/></svg>
+          </div>
+          <h3>Finance &amp; Banking</h3>
+          <p>Secure transaction platforms, reporting dashboards, compliance tools, and financial data management systems.</p>
         </div>
-        <h3>Finance &amp; Banking</h3>
-        <p>Secure transaction platforms, reporting dashboards, compliance tools, and financial data management systems.</p>
       </div>
       <div class="industry-card fade-in">
-        <div class="industry-icon">
-          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z" fill="currentColor"/></svg>
+        <div class="industry-bg" style="background-image: url('medical.webp')"></div>
+        <div class="industry-overlay"></div>
+        <div class="industry-content">
+          <div class="industry-icon">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z" fill="currentColor"/></svg>
+          </div>
+          <h3>Healthcare</h3>
+          <p>Patient management systems, appointment scheduling, medical records digitization, and healthcare analytics dashboards.</p>
         </div>
-        <h3>Healthcare</h3>
-        <p>Patient management systems, appointment scheduling, medical records digitization, and healthcare analytics dashboards.</p>
       </div>
       <div class="industry-card fade-in">
-        <div class="industry-icon">
-          <svg viewBox="0 0 24 24"><path d="M21 6h-2v3h-3v2h3v3h2v-3h3V9h-3V6zm-10 7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm0 4c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zM4 12c0-2.33 1.58-4.28 3.78-4.83l-.78-1.8C3.96 6.53 2 9.06 2 12c0 3.52 2.22 6.55 5.38 7.64l.75-1.79C5.94 16.92 4 14.66 4 12zm5.41-6.12l1.85.65c.74-.38 1.56-.56 2.42-.53l.48-1.95c-1.18-.05-2.33.23-3.35.78l-1.4.55-1.59-3.57L3.92 3.21l2.16 4.85 2.36-.83.97 2.17c.63.24 1.31.37 2 .37 1.24 0 2.42-.36 3.44-1.04l.74-1.7c-.7.32-1.44.46-2.18.42-.51-.03-1-.15-1.46-.33l-2.3-.95-.85-2.06z" fill="currentColor"/></svg>
+        <div class="industry-bg" style="background-image: url('E-commerce & Retail.webp')"></div>
+        <div class="industry-overlay"></div>
+        <div class="industry-content">
+          <div class="industry-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 6h-2v3h-3v2h3v3h2v-3h3V9h-3V6zm-10 7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm0 4c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zM4 12c0-2.33 1.58-4.28 3.78-4.83l-.78-1.8C3.96 6.53 2 9.06 2 12c0 3.52 2.22 6.55 5.38 7.64l.75-1.79C5.94 16.92 4 14.66 4 12zm5.41-6.12l1.85.65c.74-.38 1.56-.56 2.42-.53l.48-1.95c-1.18-.05-2.33.23-3.35.78l-1.4.55-1.59-3.57L3.92 3.21l2.16 4.85 2.36-.83.97 2.17c.63.24 1.31.37 2 .37 1.24 0 2.42-.36 3.44-1.04l.74-1.7c-.7.32-1.44.46-2.18.42-.51-.03-1-.15-1.46-.33l-2.3-.95-.85-2.06z" fill="currentColor"/></svg>
+          </div>
+          <h3>E-commerce &amp; Retail</h3>
+          <p>Online stores, inventory management, payment integrations, customer analytics, and order fulfillment systems.</p>
         </div>
-        <h3>E-commerce &amp; Retail</h3>
-        <p>Online stores, inventory management, payment integrations, customer analytics, and order fulfillment systems.</p>
       </div>
       <div class="industry-card fade-in">
-        <div class="industry-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z" fill="currentColor"/></svg>
+        <div class="industry-bg" style="background-image: url('Government & NGO.webp')"></div>
+        <div class="industry-overlay"></div>
+        <div class="industry-content">
+          <div class="industry-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z" fill="currentColor"/></svg>
+          </div>
+          <h3>Government &amp; NGO</h3>
+          <p>Beneficiary management systems, program monitoring dashboards, document workflows, and data collection platforms.</p>
         </div>
-        <h3>Government &amp; NGO</h3>
-        <p>Beneficiary management systems, program monitoring dashboards, document workflows, and data collection platforms.</p>
       </div>
       <div class="industry-card fade-in">
-        <div class="industry-icon">
-          <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H4V4h16v16zM18 6h-5v7l4-2.5 4 2.5V6z" fill="currentColor"/></svg>
+        <div class="industry-bg" style="background-image: url('Logistics & Transport.webp')"></div>
+        <div class="industry-overlay"></div>
+        <div class="industry-content">
+          <div class="industry-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H4V4h16v16zM18 6h-5v7l4-2.5 4 2.5V6z" fill="currentColor"/></svg>
+          </div>
+          <h3>Logistics &amp; Transport</h3>
+          <p>Fleet management systems, route optimization tools, delivery tracking platforms, and logistics analytics dashboards.</p>
         </div>
-        <h3>Logistics &amp; Transport</h3>
-        <p>Fleet management systems, route optimization tools, delivery tracking platforms, and logistics analytics dashboards.</p>
       </div>
     </div>
   </div>
@@ -256,50 +294,109 @@
   </div>
 </section>
 
-<section id="about" class="section about-section">
+<section id="about" class="section">
   <div class="container">
     <div class="about-grid">
-      <div class="about-text">
+      <div class="about-text fade-in">
         <span class="section-tag">About Us</span>
         <h2>Built in Kenya for organizations that need dependable technology</h2>
         <p>Ornest Developers is a fast-growing technology company focused on software delivery, digital transformation, security, and business support. We work with founders, SMEs, schools, and growing teams that need practical technology partners.</p>
         <p>Our approach is simple: understand the business goal, design the right system, build it securely, protect the data, and support the product after launch. We bring African market context to every project.</p>
-        <div class="about-features">
-          <div class="feature">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-            Discovery before development
-          </div>
-          <div class="feature">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-            Security considered from day one
-          </div>
-          <div class="feature">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-            Long-term support after launch
-          </div>
-          <div class="feature">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-            African market expertise
-          </div>
+        <p>Founded in Nairobi, our team of 30+ engineers, analysts, and support specialists has delivered over 50 projects across education, finance, healthcare, e-commerce, government, and logistics sectors throughout Kenya and East Africa.</p>
+        <div class="about-cta">
+          <a href="#contact" class="btn btn-primary">Let&rsquo;s Work Together</a>
         </div>
       </div>
-      <div class="about-image">
+      <div class="about-visual fade-in">
         <div class="about-carousel" id="aboutCarousel">
-          <div class="about-carousel-track" id="aboutTrack">
-            <img src="image 1.webp" class="about-slide" alt="Ornest Developers team collaboration" loading="eager">
-            <img src="image 2.webp" class="about-slide" alt="Ornest Developers office workspace">
-            <img src="System Administrator 1.webp" class="about-slide" alt="System administration and IT support team">
-            <img src="data analytics 1.webp" class="about-slide" alt="Data analytics and visualization dashboard">
-            <img src="software-development.webp" class="about-slide" alt="Software development and coding">
+          <div class="about-track" id="aboutTrack">
+            <div class="about-slide" style="background-image: url('System Administrator 2.webp')"></div>
+            <div class="about-slide" style="background-image: url('data analytics 2.webp')"></div>
+            <div class="about-slide" style="background-image: url('Cybersecurity Analyst 2.webp')"></div>
+            <div class="about-slide" style="background-image: url('DevSecOps Engineer 1.webp')"></div>
           </div>
-          <button class="about-carousel-btn about-carousel-prev" aria-label="Previous image">&lsaquo;</button>
-          <button class="about-carousel-btn about-carousel-next" aria-label="Next image">&rsaquo;</button>
-          <span class="about-carousel-counter" id="aboutCounter">1 / 5</span>
+          <div class="about-dots" id="aboutDots"></div>
         </div>
-        <div class="about-carousel-dots" id="aboutDots"></div>
-        <div class="about-image-badge">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          Nairobi, Kenya
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stats" class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="50">0</span>
+        <span class="stat-label">Projects Delivered</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="6">0</span>
+        <span class="stat-label">Years of Experience</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="30">0</span>
+        <span class="stat-label">Team Members</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="6">0</span>
+        <span class="stat-label">Service Areas</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="98">0</span>
+        <span class="stat-label">Client Satisfaction (%)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="section testimonials-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Client Feedback</span>
+      <h2>Trusted by businesses across Kenya</h2>
+      <p>Here is what our clients say about working with Ornest Developers.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p>"Ornest built our school management system from scratch. The team took time to understand our workflow, and the result streamlined everything from admissions to grade reporting."</p>
+        <div class="testimonial-author">
+          <strong>— School Principal</strong>
+          <span>Nairobi, Kenya</span>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p>"The cybersecurity audit gave us a clear picture of our vulnerabilities and a practical roadmap to fix them. Professional, thorough, and easy to work with."</p>
+        <div class="testimonial-author">
+          <strong>— Operations Director</strong>
+          <span>Financial Services, Kenya</span>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p>"Our e-commerce platform needed to work flawlessly on mobile and support M-Pesa payments. Ornest delivered both, and our sales have grown steadily since launch."</p>
+        <div class="testimonial-author">
+          <strong>— Founder</strong>
+          <span>Retail Business, Kenya</span>
         </div>
       </div>
     </div>
@@ -355,135 +452,6 @@
         </div>
         <h3>End-to-End Support</h3>
         <p>We don't disappear after launch. Every project comes with documentation, training, a support plan, and a path for continuous improvement.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="stats" class="stats-section">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <span class="stat-number" data-target="50">0</span>
-        <span class="stat-label">Projects Delivered</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number" data-target="6">0</span>
-        <span class="stat-label">Years of Experience</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number" data-target="30">0</span>
-        <span class="stat-label">Team Members</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number" data-target="6">0</span>
-        <span class="stat-label">Service Areas</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number" data-target="98">0</span>
-        <span class="stat-label">Client Satisfaction (%)</span>
-      </div>
-    </div>
-    <div class="stats-showcase fade-in">
-      <img src="Cybersecurity Analyst 5.webp" alt="Security team performing infrastructure analysis" loading="lazy">
-      <img src="DevSecOps Engineer.webp" alt="Engineering team managing cloud deployment pipelines" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<section id="testimonials" class="section testimonials-section">
-  <div class="container">
-    <div class="section-header fade-in">
-      <span class="section-tag">Client Feedback</span>
-      <h2>Trusted by businesses across Kenya</h2>
-      <p>Here is what our clients say about working with Ornest Developers.</p>
-    </div>
-    <div class="testimonials-grid" id="testimonialTrack">
-      <div class="testimonial-card fade-in">
-        <div class="testimonial-stars">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <p>"Ornest built our school management system from scratch. The team took time to understand our workflow, and the result streamlined everything from admissions to grade reporting."</p>
-        <div class="testimonial-author">
-          <strong>— School Principal</strong>
-          <span>Nairobi, Kenya</span>
-        </div>
-      </div>
-      <div class="testimonial-card fade-in">
-        <div class="testimonial-stars">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <p>"The cybersecurity audit gave us a clear picture of our vulnerabilities and a practical roadmap to fix them. Professional, thorough, and easy to work with."</p>
-        <div class="testimonial-author">
-          <strong>— Operations Director</strong>
-          <span>Financial Services, Kenya</span>
-        </div>
-      </div>
-      <div class="testimonial-card fade-in">
-        <div class="testimonial-stars">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <p>"Our e-commerce platform needed to work flawlessly on mobile and support M-Pesa payments. Ornest delivered both, and our sales have grown steadily since launch."</p>
-        <div class="testimonial-author">
-          <strong>— Founder</strong>
-          <span>Retail Business, Kenya</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="expertise" class="section expertise-section">
-  <div class="container">
-    <div class="section-header fade-in">
-      <span class="section-tag">Our Expertise</span>
-      <h2>What we deliver for our clients</h2>
-      <p>Every system we build is backed by disciplined engineering, security awareness, and a commitment to real business outcomes.</p>
-    </div>
-    <div class="expertise-grid">
-      <div class="expertise-card fade-in">
-        <div class="expertise-icon">
-          <svg viewBox="0 0 48 48"><path d="M12 36V12l12 12-12 12zM24 36V12l12 12-12 12z" fill="#0f3460" opacity=".12"/><circle cx="40" cy="8" r="6" fill="#e94560"/></svg>
-        </div>
-        <h3>We build secure, scalable software</h3>
-        <p>Custom applications, APIs, portals, and business systems that are maintainable, tested, and built to evolve with your needs.</p>
-        <div class="role-tags"><span>JavaScript</span><span>Python</span><span>Node.js</span><span>SQL</span></div>
-      </div>
-      <div class="expertise-card fade-in">
-        <div class="expertise-icon">
-          <svg viewBox="0 0 48 48"><rect x="8" y="6" width="32" height="36" rx="4" stroke="#0f3460" stroke-width="2.5" fill="none"/><path d="M16 18h16M16 24h12M16 30h8" stroke="#e94560" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <h3>We create interfaces users love</h3>
-        <p>Responsive, accessible, and efficient front-ends that work on any device and make complex tasks feel simple.</p>
-        <div class="role-tags"><span>HTML</span><span>CSS</span><span>React</span><span>UX</span></div>
-      </div>
-      <div class="expertise-card fade-in">
-        <div class="expertise-icon">
-          <svg viewBox="0 0 48 48"><path d="M24 4C14 4 8 12 8 20s6 12 16 24c10-12 16-16 16-20S34 4 24 4z" stroke="#0f3460" stroke-width="2" fill="none"/><circle cx="24" cy="20" r="6" fill="#e94560"/></svg>
-        </div>
-        <h3>We protect digital infrastructure</h3>
-        <p>Security reviews, vulnerability assessments, access control, monitoring, and incident readiness for business-critical systems.</p>
-        <div class="role-tags"><span>Security</span><span>Risk</span><span>Hardening</span><span>Compliance</span></div>
-      </div>
-      <div class="expertise-card fade-in">
-        <div class="expertise-icon">
-          <svg viewBox="0 0 48 48"><path d="M8 34l10-10 8 6 14-16" stroke="#0f3460" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="38" cy="14" r="4" fill="#e94560"/></svg>
-        </div>
-        <h3>We turn data into decisions</h3>
-        <p>Dashboards, reports, data cleanup, and analytics tools that make business performance visible and actionable.</p>
-        <div class="role-tags"><span>SQL</span><span>Power BI</span><span>Tableau</span><span>Analytics</span></div>
       </div>
     </div>
   </div>
@@ -570,7 +538,6 @@
         </div>
       </div>
       <div class="contact-form fade-in">
-        <!-- Replace YOUR_FORM_ID with your Formspree form ID (https://formspree.io) -->
         <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <div class="form-row">
             <input type="text" name="name" placeholder="Your Name" required>
@@ -626,7 +593,6 @@
         <a href="#industries">Industries</a>
         <a href="#work">Case Studies</a>
         <a href="#about">About</a>
-        <a href="#why-choose">Why Us</a>
       </div>
       <div>
         <h4>Contact</h4>

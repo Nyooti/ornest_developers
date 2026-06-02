@@ -1,7 +1,6 @@
 (function() {
   'use strict';
 
-  // Mark JS as active — enables fade-in CSS rules
   document.documentElement.classList.add('js-enabled');
 
   // ==================== PARTICLES ====================
@@ -10,7 +9,7 @@
     if (!canvas) return;
     var ctx = canvas.getContext('2d');
     var particles = [];
-    var count = 50;
+    var count = 40;
 
     function resize() {
       canvas.width = window.innerWidth;
@@ -23,8 +22,8 @@
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
         r: Math.random() * 2 + 1,
         a: Math.random() * 0.4 + 0.1
       });
@@ -71,9 +70,9 @@
     var el = document.getElementById('typed-text');
     if (!el) return;
     var strings = [
+      'We build systems that grow your business',
       'Building Kenya\'s Digital Future',
       'Code. Innovate. Deploy.',
-      'Where Tech Meets Excellence',
       'Powering African Innovation'
     ];
     var strIndex = 0;
@@ -104,25 +103,56 @@
     }
 
     el.classList.add('typing');
-    // Start after a brief pause
     setTimeout(type, 1500);
   }
 
-  // ==================== HERO CAROUSEL ====================
+  // ==================== HERO SHOWCASE CAROUSEL ====================
   function setupHeroCarousel() {
-    var slides = document.querySelectorAll('.hero-slide');
+    var carousel = document.getElementById('heroCarousel');
+    if (!carousel) return;
+    var track = document.getElementById('heroTrack');
+    if (!track) return;
+    var slides = track.querySelectorAll('.showcase-slide');
     if (slides.length < 2) return;
+    var dotsContainer = document.getElementById('heroDots');
+    if (!dotsContainer) return;
 
-    var reducedMotion = window.matchMedia &&
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reducedMotion) return;
+    slides.forEach(function(_, i) {
+      var dot = document.createElement('span');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', function() { goTo(i); });
+      dotsContainer.appendChild(dot);
+    });
 
     var index = 0;
-    setInterval(function() {
-      slides[index].classList.remove('active');
-      index = (index + 1) % slides.length;
-      slides[index].classList.add('active');
-    }, 5200);
+    var total = slides.length;
+    var timer;
+
+    function goTo(i) {
+      if (i === index) return;
+      index = i;
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      var dots = dotsContainer.children;
+      for (var d = 0; d < dots.length; d++) {
+        dots[d].classList.toggle('active', d === index);
+      }
+      resetTimer();
+    }
+
+    function next() { goTo((index + 1) % total); }
+    function prev() { goTo((index - 1 + total) % total); }
+
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(next, 4500);
+    }
+
+    var nextBtn = carousel.querySelector('.showcase-next');
+    var prevBtn = carousel.querySelector('.showcase-prev');
+    if (nextBtn) nextBtn.addEventListener('click', next);
+    if (prevBtn) prevBtn.addEventListener('click', prev);
+
+    timer = setInterval(next, 4500);
   }
 
   // ==================== ABOUT CAROUSEL ====================
@@ -146,12 +176,6 @@
     var index = 0;
     var total = slides.length;
     var timer;
-    var counterEl = document.getElementById('aboutCounter');
-    updateCounter();
-
-    function updateCounter() {
-      if (counterEl) counterEl.textContent = (index + 1) + ' / ' + total;
-    }
 
     function goTo(i) {
       if (i === index) return;
@@ -161,27 +185,17 @@
       for (var d = 0; d < dots.length; d++) {
         dots[d].classList.toggle('active', d === index);
       }
-      updateCounter();
       resetTimer();
     }
 
     function next() { goTo((index + 1) % total); }
-    function prev() { goTo((index - 1 + total) % total); }
 
     function resetTimer() {
       clearInterval(timer);
       timer = setInterval(next, 4000);
     }
 
-    var nextBtn = carousel.querySelector('.about-carousel-next');
-    var prevBtn = carousel.querySelector('.about-carousel-prev');
-    if (nextBtn) nextBtn.addEventListener('click', next);
-    if (prevBtn) prevBtn.addEventListener('click', prev);
-
-    timer = setTimeout(function() {
-      next();
-      timer = setInterval(next, 4000);
-    }, 3000);
+    timer = setInterval(next, 4000);
   }
 
   // ==================== SCROLL REVEAL ====================
@@ -232,12 +246,10 @@
     if (!toggle || !nav) return;
     toggle.addEventListener('click', function() {
       nav.classList.toggle('open');
-      toggle.classList.toggle('active');
     });
     nav.querySelectorAll('a').forEach(function(a) {
       a.addEventListener('click', function() {
         nav.classList.remove('open');
-        toggle.classList.remove('active');
       });
     });
   }
@@ -269,7 +281,7 @@
         btn.style.background = '#dc2626';
       }).finally(function() {
         setTimeout(function() {
-          btn.innerHTML = 'Send Message ' +
+          btn.innerHTML = 'Send Project Request ' +
             '<svg width="18" height="18" viewBox="0 0 24 24" fill="#fff">' +
             '<path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>';
           btn.disabled = false;
@@ -339,9 +351,9 @@
 
   // ==================== INIT ====================
   document.addEventListener('DOMContentLoaded', function() {
-    try { createParticles(); } catch(e) { /* canvas not supported */ }
+    try { createParticles(); } catch(e) {}
     setupHeroCarousel();
-    try { setupAboutCarousel(); } catch(e) { /* about carousel error */ }
+    setupAboutCarousel();
     startTyping();
     observeFadeIn();
     animateCounters();
