@@ -3,7 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ornest Developers — Kenyan Tech Company</title>
+  <title>Ornest Developers | Software, Cybersecurity & Data Solutions – Kenya</title>
+  <meta name="description" content="Ornest Developers is a Kenyan technology company delivering custom software, mobile apps, cybersecurity, data analytics, cloud/DevOps, and IT support for growing businesses across Africa.">
+  <meta name="keywords" content="Ornest Developers, software development Kenya, web development Kenya, cybersecurity Kenya, data analytics Kenya, DevOps Kenya, mobile app development Kenya, IT support Kenya, Kenyan tech company, African software company">
+  <meta name="author" content="Ornest Developers">
+  <meta property="og:title" content="Ornest Developers – Software, Cybersecurity & Data Solutions">
+  <meta property="og:description" content="We build secure systems, automate operations, and turn data into decisions for ambitious African businesses.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nyooti.github.io/ornest_developers/">
+  <meta property="og:image" content="https://nyooti.github.io/ornest_developers/web-development-word.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ornest Developers – Software, Cybersecurity & Data Solutions">
+  <meta name="twitter:description" content="We build secure systems, automate operations, and turn data into decisions for ambitious African businesses.">
+  <meta name="twitter:image" content="https://nyooti.github.io/ornest_developers/web-development-word.webp">
+  <link rel="icon" href="logo.png" type="image/png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,14 +26,16 @@
 
 <header>
   <div class="container header-inner">
-    <div class="logo">
+    <a class="logo" href="#top" aria-label="Ornest Developers home">
       <img class="logo-mark" src="logo.png" alt="Ornest Developers logo">
       Ornest Developers
-    </div>
+    </a>
     <nav id="nav-menu">
+      <a href="#services">Services</a>
+      <a href="#industries">Industries</a>
+      <a href="#work">Case Studies</a>
       <a href="#about">About</a>
-      <a href="#roles">Roles</a>
-      <a href="#stats">Stats</a>
+      <a href="#why-choose">Why Us</a>
       <a href="#contact">Contact</a>
     </nav>
     <button class="menu-toggle" id="menuToggle" aria-label="Menu">
@@ -27,7 +44,7 @@
   </div>
 </header>
 
-<section class="hero">
+<section id="top" class="hero">
   <div class="hero-carousel" aria-hidden="true">
     <img class="hero-slide active" src="web-development-word.webp" alt="">
     <img class="hero-slide" src="software-development.webp" alt="">
@@ -37,45 +54,289 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="container hero-content">
-    <p class="hero-badge">Kenya's Rising Tech Powerhouse</p>
-    <h2 id="typed-text">Building Kenya's Digital Future</h2>
-    <p class="hero-sub">Ornest Developers brings together passionate engineers, designers, and business professionals to deliver world-class software solutions across Africa.</p>
+    <p class="hero-badge">Software. Security. Data. Cloud.</p>
+    <h1 id="typed-text">We build systems that grow your business</h1>
+    <p class="hero-sub">Ornest Developers partners with African businesses to design, build, secure, and scale modern digital products — from web platforms and mobile apps to cybersecurity and data intelligence.</p>
     <div class="hero-buttons">
-      <a href="#roles" class="btn btn-primary">Explore Roles</a>
-      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      <a href="#contact" class="btn btn-primary">Start a Project</a>
+      <a href="#services" class="btn btn-outline">Explore Services</a>
+    </div>
+    <div class="hero-proof" aria-label="Company highlights">
+      <span>Custom business systems</span>
+      <span>Cybersecurity-first delivery</span>
+      <span>Cloud-ready architecture</span>
+      <span>African market expertise</span>
     </div>
   </div>
 </section>
 
-<section id="about" class="section">
+<section id="services" class="section services-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">What We Deliver</span>
+      <h2>Technology services engineered for business outcomes</h2>
+      <p>We combine engineering discipline, security awareness, and product thinking to solve real business problems with reliable digital systems.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card fade-in">
+        <div class="service-icon service-red">
+          <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM8 21h8M12 18v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Web &amp; App Development</h3>
+        <p>Responsive websites, portals, dashboards, and custom business applications built for usability, performance, and maintainability.</p>
+        <div class="role-tags"><span>Websites</span><span>Portals</span><span>APIs</span></div>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon service-blue">
+          <svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 4.2-2.6 7.5-7 9-4.4-1.5-7-4.8-7-9V7l7-4z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Cybersecurity</h3>
+        <p>Security reviews, vulnerability assessments, secure deployment practices, and ongoing protection plans for business-critical systems.</p>
+        <div class="role-tags"><span>Audits</span><span>Hardening</span><span>Monitoring</span></div>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon service-green">
+          <svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Data Analytics</h3>
+        <p>Reports, dashboards, data cleanup, and decision-support tools that turn scattered information into clear business insight.</p>
+        <div class="role-tags"><span>Dashboards</span><span>SQL</span><span>Power BI</span></div>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon service-amber">
+          <svg viewBox="0 0 24 24"><path d="M6 17a4 4 0 010-8 6 6 0 0111.3-2A5 5 0 1118 17H6z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 20h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Cloud &amp; DevOps</h3>
+        <p>Deployment pipelines, cloud setup, infrastructure automation, backups, monitoring, and operational reliability at scale.</p>
+        <div class="role-tags"><span>CI/CD</span><span>Cloud</span><span>Docker</span></div>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon service-blue">
+          <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="17" r="2" fill="currentColor"/></svg>
+        </div>
+        <h3>Custom Business Systems</h3>
+        <p>Internal tools for finance, inventory, operations, schools, customer management, and workflow automation tailored to your process.</p>
+        <div class="role-tags"><span>CRM</span><span>Inventory</span><span>Automation</span></div>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon service-green">
+          <svg viewBox="0 0 24 24"><path d="M12 6v6l4 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>IT Support &amp; Infrastructure</h3>
+        <p>Technical support, device setup, network assistance, server care, user support, and practical technology guidance for your team.</p>
+        <div class="role-tags"><span>Support</span><span>Networks</span><span>Servers</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="industries" class="section industries-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Industries We Serve</span>
+      <h2>Proven experience across key sectors</h2>
+      <p>We bring deep domain knowledge to every industry we work with, delivering solutions that fit real-world operational contexts.</p>
+    </div>
+    <div class="industries-grid">
+      <div class="industry-card fade-in">
+        <div class="industry-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm0 2.84l5.72 3.11L12 12.06 6.28 8.95 12 5.84zM5 15.18l2.1-1.15L12 16.94l4.9-2.91L19 15.18v-2.36L12 18.5l-7-3.68v2.36z" fill="currentColor"/></svg>
+        </div>
+        <h3>Education</h3>
+        <p>School management systems, e-learning portals, student information systems, and academic analytics platforms.</p>
+      </div>
+      <div class="industry-card fade-in">
+        <div class="industry-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 11h4v10H3V11zm7-6h4v16h-4V5zm7 4h4v12h-4V9z" fill="currentColor"/></svg>
+        </div>
+        <h3>Finance &amp; Banking</h3>
+        <p>Secure transaction platforms, reporting dashboards, compliance tools, and financial data management systems.</p>
+      </div>
+      <div class="industry-card fade-in">
+        <div class="industry-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z" fill="currentColor"/></svg>
+        </div>
+        <h3>Healthcare</h3>
+        <p>Patient management systems, appointment scheduling, medical records digitization, and healthcare analytics dashboards.</p>
+      </div>
+      <div class="industry-card fade-in">
+        <div class="industry-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 6h-2v3h-3v2h3v3h2v-3h3V9h-3V6zm-10 7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm0 4c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zM4 12c0-2.33 1.58-4.28 3.78-4.83l-.78-1.8C3.96 6.53 2 9.06 2 12c0 3.52 2.22 6.55 5.38 7.64l.75-1.79C5.94 16.92 4 14.66 4 12zm5.41-6.12l1.85.65c.74-.38 1.56-.56 2.42-.53l.48-1.95c-1.18-.05-2.33.23-3.35.78l-1.4.55-1.59-3.57L3.92 3.21l2.16 4.85 2.36-.83.97 2.17c.63.24 1.31.37 2 .37 1.24 0 2.42-.36 3.44-1.04l.74-1.7c-.7.32-1.44.46-2.18.42-.51-.03-1-.15-1.46-.33l-2.3-.95-.85-2.06z" fill="currentColor"/></svg>
+        </div>
+        <h3>E-commerce &amp; Retail</h3>
+        <p>Online stores, inventory management, payment integrations, customer analytics, and order fulfillment systems.</p>
+      </div>
+      <div class="industry-card fade-in">
+        <div class="industry-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z" fill="currentColor"/></svg>
+        </div>
+        <h3>Government &amp; NGO</h3>
+        <p>Beneficiary management systems, program monitoring dashboards, document workflows, and data collection platforms.</p>
+      </div>
+      <div class="industry-card fade-in">
+        <div class="industry-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H4V4h16v16zM18 6h-5v7l4-2.5 4 2.5V6z" fill="currentColor"/></svg>
+        </div>
+        <h3>Logistics &amp; Transport</h3>
+        <p>Fleet management systems, route optimization tools, delivery tracking platforms, and logistics analytics dashboards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="section work-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Case Studies</span>
+      <h2>Real projects with measurable business value</h2>
+      <p>These examples show the kind of solutions Ornest can design, build, secure, and support for different organizations.</p>
+    </div>
+    <div class="project-grid">
+      <article class="project-card fade-in">
+        <img class="project-media" src="web-development-laptop.webp" alt="School management system interface on a laptop" loading="lazy">
+        <div class="project-content">
+          <span class="project-kicker">Education</span>
+          <h3>School Management System</h3>
+          <p>A comprehensive platform for student records, fee tracking, timetable management, grade reporting, and parent communication portals.</p>
+          <div class="role-tags"><span>Full Stack</span><span>Database</span><span>Portal</span></div>
+        </div>
+      </article>
+      <article class="project-card fade-in">
+        <img class="project-media" src="software-development.webp" alt="E-commerce platform development" loading="lazy">
+        <div class="project-content">
+          <span class="project-kicker">E-commerce</span>
+          <h3>E-commerce Platform</h3>
+          <p>An online store with product catalog, shopping cart, mobile money and card payment integration, order tracking, and inventory management.</p>
+          <div class="role-tags"><span>Web</span><span>Payments</span><span>Mobile</span></div>
+        </div>
+      </article>
+      <article class="project-card fade-in">
+        <img class="project-media" src="data analytics 3.webp" alt="Business intelligence dashboard showing key metrics" loading="lazy">
+        <div class="project-content">
+          <span class="project-kicker">Analytics</span>
+          <h3>Business Intelligence Dashboard</h3>
+          <p>Management dashboards that bring sales, operations, and financial data into one clear real-time view for faster strategic decisions.</p>
+          <div class="role-tags"><span>Data</span><span>Reports</span><span>Insights</span></div>
+        </div>
+      </article>
+      <article class="project-card fade-in">
+        <img class="project-media" src="Cybersecurity Analyst 4.webp" alt="Security analyst reviewing system vulnerabilities" loading="lazy">
+        <div class="project-content">
+          <span class="project-kicker">Security</span>
+          <h3>Security Audit &amp; Hardening</h3>
+          <p>A structured review of system access controls, backup procedures, network security, and deployment practices for a financial services firm.</p>
+          <div class="role-tags"><span>Risk</span><span>Access</span><span>Hardening</span></div>
+        </div>
+      </article>
+      <article class="project-card fade-in">
+        <img class="project-media" src="web-development-word.webp" alt="Company website redesign project" loading="lazy">
+        <div class="project-content">
+          <span class="project-kicker">Web Design</span>
+          <h3>Company Website Redesign</h3>
+          <p>A complete brand refresh with a modern responsive website, client portal integration, performance optimization, and SEO foundation.</p>
+          <div class="role-tags"><span>UX</span><span>Frontend</span><span>SEO</span></div>
+        </div>
+      </article>
+      <article class="project-card fade-in">
+        <img class="project-media" src="DevSecOps Engineer.webp" alt="DevSecOps automation and deployment pipeline" loading="lazy">
+        <div class="project-content">
+          <span class="project-kicker">DevOps</span>
+          <h3>Operations Portal</h3>
+          <p>An internal operations platform with automated deployment pipelines, system monitoring dashboards, incident tracking, and team workflows.</p>
+          <div class="role-tags"><span>Automation</span><span>Cloud</span><span>Monitoring</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section about-section">
   <div class="container">
     <div class="about-grid">
       <div class="about-text fade-in">
         <span class="section-tag">About Us</span>
-        <h3>Building Kenya's Digital Future</h3>
-        <p>Ornest Developers is a fast-growing Kenyan tech company built on a culture of innovation, collaboration, and excellence. Our team spans across technical and business functions, working together to build software that powers businesses across Africa.</p>
-        <p>From award-winning developers to strategic business minds, every role at Ornest contributes to our mission of transforming the African tech landscape.</p>
+        <h2>Built in Kenya for organizations that need dependable technology</h2>
+        <p>Ornest Developers is a fast-growing technology company focused on software delivery, digital transformation, security, and business support. We work with founders, SMEs, schools, and growing teams that need practical technology partners.</p>
+        <p>Our approach is simple: understand the business goal, design the right system, build it securely, protect the data, and support the product after launch. We bring African market context to every project.</p>
         <div class="about-features">
           <div class="feature">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-            50+ Projects Delivered
+            Discovery before development
           </div>
           <div class="feature">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-            30+ Team Members
+            Security considered from day one
           </div>
           <div class="feature">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-            4+ Years of Excellence
+            Long-term support after launch
+          </div>
+          <div class="feature">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            African market expertise
           </div>
         </div>
       </div>
       <div class="about-image fade-in">
-        <img src="image 1.webp" alt="Ornest Developers team collaboration" loading="lazy">
+        <img src="image 1.webp" alt="Ornest Developers team working together in Nairobi" loading="lazy">
         <div class="about-image-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           Nairobi, Kenya
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why-choose" class="section why-choose-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Why Choose Ornest</span>
+      <h2>What makes us different</h2>
+      <p>We combine technical excellence with a deep understanding of the African business environment.</p>
+    </div>
+    <div class="reasons-grid">
+      <div class="reason-card fade-in">
+        <div class="reason-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.32l8 4 8-4v5.36l-8 4-8-4V9.32z" fill="currentColor"/></svg>
+        </div>
+        <h3>Full-Service Delivery</h3>
+        <p>From strategy and design to development, security, deployment, and ongoing support — we cover the entire product lifecycle.</p>
+      </div>
+      <div class="reason-card fade-in">
+        <div class="reason-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 4.2-2.6 7.5-7 9-4.4-1.5-7-4.8-7-9V7l7-4z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Security-First Approach</h3>
+        <p>Every system we build is designed with security from day one — not added as an afterthought. Your data and your users stay protected.</p>
+      </div>
+      <div class="reason-card fade-in">
+        <div class="reason-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 6h-2v3h-3v2h3v3h2v-3h3V9h-3V6zm-10 7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm0 4c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zM4 12c0-2.33 1.58-4.28 3.78-4.83l-.78-1.8C3.96 6.53 2 9.06 2 12c0 3.52 2.22 6.55 5.38 7.64l.75-1.79C5.94 16.92 4 14.66 4 12zm5.41-6.12l1.85.65c.74-.38 1.56-.56 2.42-.53l.48-1.95c-1.18-.05-2.33.23-3.35.78l-1.4.55-1.59-3.57L3.92 3.21l2.16 4.85 2.36-.83.97 2.17c.63.24 1.31.37 2 .37 1.24 0 2.42-.36 3.44-1.04l.74-1.7c-.7.32-1.44.46-2.18.42-.51-.03-1-.15-1.46-.33l-2.3-.95-.85-2.06z" fill="currentColor"/></svg>
+        </div>
+        <h3>African Market Context</h3>
+        <p>We understand local business realities, mobile money ecosystems, connectivity constraints, and regulatory environments across African markets.</p>
+      </div>
+      <div class="reason-card fade-in">
+        <div class="reason-icon">
+          <svg viewBox="0 0 24 24"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" fill="currentColor"/></svg>
+        </div>
+        <h3>Transparent Communication</h3>
+        <p>No black boxes. You get regular updates, clear timelines, honest scope management, and a partner who tells you what you need to hear.</p>
+      </div>
+      <div class="reason-card fade-in">
+        <div class="reason-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/></svg>
+        </div>
+        <h3>Proven Track Record</h3>
+        <p>50+ projects delivered across education, finance, e-commerce, and government sectors. Our clients stay with us because we deliver results.</p>
+      </div>
+      <div class="reason-card fade-in">
+        <div class="reason-icon">
+          <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" fill="currentColor"/></svg>
+        </div>
+        <h3>End-to-End Support</h3>
+        <p>We don't disappear after launch. Every project comes with documentation, training, a support plan, and a path for continuous improvement.</p>
       </div>
     </div>
   </div>
@@ -86,15 +347,19 @@
     <div class="stats-grid">
       <div class="stat-item">
         <span class="stat-number" data-target="50">0</span>
-        <span class="stat-label">Projects</span>
+        <span class="stat-label">Projects Delivered</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="6">0</span>
+        <span class="stat-label">Years of Experience</span>
       </div>
       <div class="stat-item">
         <span class="stat-number" data-target="30">0</span>
         <span class="stat-label">Team Members</span>
       </div>
       <div class="stat-item">
-        <span class="stat-number" data-target="15">0</span>
-        <span class="stat-label">Roles</span>
+        <span class="stat-number" data-target="6">0</span>
+        <span class="stat-label">Service Areas</span>
       </div>
       <div class="stat-item">
         <span class="stat-number" data-target="98">0</span>
@@ -102,165 +367,138 @@
       </div>
     </div>
     <div class="stats-showcase fade-in">
-      <img src="Cybersecurity Analyst 5.webp" alt="Security analyst operations" loading="lazy">
-      <img src="DevSecOps Engineer.webp" alt="DevSecOps engineering practice" loading="lazy">
+      <img src="Cybersecurity Analyst 5.webp" alt="Security team performing infrastructure analysis" loading="lazy">
+      <img src="DevSecOps Engineer.webp" alt="Engineering team managing cloud deployment pipelines" loading="lazy">
     </div>
   </div>
 </section>
 
-<section id="roles" class="section roles-section">
+<section id="testimonials" class="section testimonials-section">
   <div class="container">
     <div class="section-header fade-in">
-      <span class="section-tag">Our Team Structure</span>
-      <h3>Technical Roles</h3>
-      <p>The engineers, designers, and analysts who build and protect our systems.</p>
+      <span class="section-tag">Client Feedback</span>
+      <h2>Trusted by businesses across Kenya</h2>
+      <p>Here is what our clients say about working with Ornest Developers.</p>
     </div>
-    <div class="role-grid">
-
-      <div class="role-card fade-in">
-        <img class="role-media" src="software-development.webp" alt="Software development workspace" loading="lazy">
-        <div class="role-icon"><svg viewBox="0 0 48 48"><path d="M12 36V12l12 12-12 12zM24 36V12l12 12-12 12z" fill="#0f3460"/><circle cx="40" cy="8" r="6" fill="#e94560"/></svg></div>
-        <div class="role-title">Software Developer / Software Engineer</div>
-        <div class="role-desc">Build software applications, websites, and systems.</div>
-        <div class="role-section"><strong>Responsibilities:</strong> Write and test code, develop web and mobile apps, fix bugs, integrate databases &amp; APIs, maintain existing software.</div>
-        <div class="role-section"><strong>Skills:</strong> Java, Python, JavaScript, PHP, C#, problem-solving, database management.</div>
-        <div class="role-tags"><span>Java</span><span>Python</span><span>JS</span></div>
+    <div class="testimonials-grid" id="testimonialTrack">
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p>"Ornest built our school management system from scratch. The team took time to understand our workflow, and the result streamlined everything from admissions to grade reporting."</p>
+        <div class="testimonial-author">
+          <strong>— School Principal</strong>
+          <span>Nairobi, Kenya</span>
+        </div>
       </div>
-
-      <div class="role-card fade-in">
-        <img class="role-media" src="web-development-laptop.webp" alt="Front-end development on laptop" loading="lazy">
-        <div class="role-icon"><svg viewBox="0 0 48 48"><rect x="8" y="6" width="32" height="36" rx="4" stroke="#0f3460" stroke-width="2.5" fill="none"/><path d="M16 18h16M16 24h12M16 30h8" stroke="#e94560" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <div class="role-title">Front-End Developer</div>
-        <div class="role-desc">Create the part of a website or app users interact with.</div>
-        <div class="role-section"><strong>Responsibilities:</strong> Design user interfaces, build responsive pages, improve UX, work with designers and backend developers.</div>
-        <div class="role-section"><strong>Tools:</strong> HTML, CSS, JavaScript, React, Angular.</div>
-        <div class="role-tags"><span>HTML</span><span>CSS</span><span>React</span></div>
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p>"The cybersecurity audit gave us a clear picture of our vulnerabilities and a practical roadmap to fix them. Professional, thorough, and easy to work with."</p>
+        <div class="testimonial-author">
+          <strong>— Operations Director</strong>
+          <span>Financial Services, Kenya</span>
+        </div>
       </div>
-
-      <div class="role-card fade-in">
-        <img class="role-media" src="web 2.webp" alt="Back-end engineering interface" loading="lazy">
-        <div class="role-icon"><svg viewBox="0 0 48 48"><rect x="10" y="8" width="28" height="32" rx="4" fill="#0f3460" opacity=".1"/><path d="M16 16h16M16 22h10M16 28h14" stroke="#0f3460" stroke-width="2" stroke-linecap="round"/><circle cx="34" cy="36" r="6" fill="#e94560"/></svg></div>
-        <div class="role-title">Back-End Developer</div>
-        <div class="role-desc">Build and manage the server-side logic of applications.</div>
-        <div class="role-section"><strong>Responsibilities:</strong> Develop APIs, manage databases, handle authentication &amp; security, ensure system performance.</div>
-        <div class="role-section"><strong>Tools:</strong> Node.js, Java, Python, PostgreSQL, MySQL.</div>
-        <div class="role-tags"><span>Node.js</span><span>Python</span><span>SQL</span></div>
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e94560"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p>"Our e-commerce platform needed to work flawlessly on mobile and support M-Pesa payments. Ornest delivered both, and our sales have grown steadily since launch."</p>
+        <div class="testimonial-author">
+          <strong>— Founder</strong>
+          <span>Retail Business, Kenya</span>
+        </div>
       </div>
-
-      <div class="role-card fade-in">
-        <img class="role-media" src="image 2.webp" alt="Full-stack project planning" loading="lazy">
-        <div class="role-icon"><svg viewBox="0 0 48 48"><rect x="6" y="10" width="16" height="12" rx="2" fill="#0f3460" opacity=".15"/><rect x="26" y="10" width="16" height="12" rx="2" fill="#e94560" opacity=".15"/><rect x="6" y="26" width="16" height="12" rx="2" fill="#e94560" opacity=".15"/><rect x="26" y="26" width="16" height="12" rx="2" fill="#0f3460" opacity=".15"/><path d="M14 16l20 20M34 16L14 36" stroke="#0f3460" stroke-width="2"/></svg></div>
-        <div class="role-title">Full-Stack Developer</div>
-        <div class="role-desc">Handle both front-end and back-end development.</div>
-        <div class="role-section"><strong>Responsibilities:</strong> Build complete applications, connect interfaces with databases, deploy and maintain systems, troubleshoot issues.</div>
-        <div class="role-section"><strong>Note:</strong> Kenyan startups prefer full-stack developers because they can work across the entire product.</div>
-        <div class="role-tags"><span>Full Stack</span><span>DevOps</span></div>
-      </div>
-
-      <div class="role-card fade-in">
-        <img class="role-media" src="web-development-word.webp" alt="Quality assurance review" loading="lazy">
-        <div class="role-icon"><svg viewBox="0 0 48 48"><path d="M24 6l4 12h12l-10 8 4 14-10-8-10 8 4-14-10-8h12L24 6z" fill="#0f3460" opacity=".15" stroke="#0f3460" stroke-width="1.5"/></svg></div>
-        <div class="role-title">Quality Assurance (QA) Analyst / Software Tester</div>
-        <div class="role-desc">Ensure software works correctly before release.</div>
-        <div class="role-section"><strong>Responsibilities:</strong> Create test plans, perform manual &amp; automated testing, report bugs, verify fixes, improve software quality.</div>
-        <div class="role-tags"><span>Testing</span><span>Selenium</span><span>Cypress</span></div>
-      </div>
-
-      <div class="role-card fade-in">
-        <img class="role-media" src="Cybersecurity Analyst 1.webp" alt="Cybersecurity monitoring" loading="lazy">
-        <div class="role-icon"><svg viewBox="0 0 48 48"><path d="M24 4C14 4 8 12 8 20s6 12 16 24c10-12 16-16 16-24S34 4 24 4z" stroke="#0f3460" stroke-width="2" fill="none"/><circle cx="24" cy="20" r="6" fill="#e94560"/></svg></div>
-        <div class="role-title">Cybersecurity Analyst</div>
-        <div class="role-desc">Protect company systems and data from cyber threats.</div>
-        <div class="role-section"><strong>Responsibilities:</strong> Monitor security threats, conduct vulnerability assessments, perform penetration testing, implement security controls, investigate incidents.</div>
-        <div class="role-tags"><span>Security</span><span>Pen Testing</span></div>
-      </div>
-
-      <div class="role-card fade-in">
-        <img class="role-media" src="DevSecOps Engineer 1.webp" alt="DevSecOps infrastructure workflow" loading="lazy">
-        <div class="role-icon"><svg viewBox="0 0 48 48"><rect x="8" y="12" width="32" height="24" rx="3" stroke="#0f3460" stroke-width="2" fill="none"/><path d="M8 18h32" stroke="#0f3460" stroke-width="2"/><circle cx="16" cy="28" r="3" fill="#e94560"/><circle cx="32" cy="28" r="3" fill="#0f3460"/></svg></div>
-        <div class="role-title">DevSecOps Engineer</div>
-        <div class="role-desc">Combine software development, operations, and security.</div>
-        <div class="role-section"><strong>Responsibilities:</strong> Automate deployment, monitor cloud infrastructure, integrate security checks into CI/CD pipelines, manage containers &amp; cloud services.</div>
-        <div class="role-tags"><span>Docker</span><span>K8s</span><span>CI/CD</span></div>
-      </div>
-
-      <div class="role-card fade-in">
-        <img class="role-media" src="data analytics 1.webp" alt="Digital product design analytics" loading="lazy">
-        <div class="role-icon"><svg viewBox="0 0 48 48"><rect x="10" y="8" width="28" height="32" rx="4" fill="#0f3460" opacity=".08"/><circle cx="24" cy="20" r="6" fill="#e94560"/><path d="M16 32h16v4H16z" fill="#0f3460"/></svg></div>
-        <div class="role-title">UI/UX Designer</div>
-        <div class="role-desc">Design attractive and user-friendly digital products.</div>
-        <div class="role-section"><strong>Responsibilities:</strong> Create wireframes &amp; prototypes, conduct user research, design interfaces, improve user experience.</div>
-        <div class="role-section"><strong>Tools:</strong> Figma, Adobe XD, Sketch.</div>
-        <div class="role-tags"><span>Figma</span><span>Prototyping</span></div>
-      </div>
-
-      <div class="role-card fade-in">
-        <img class="role-media" src="System Administrator 1.webp" alt="System administrator server environment" loading="lazy">
-        <div class="role-icon"><svg viewBox="0 0 48 48"><rect x="8" y="10" width="32" height="28" rx="3" stroke="#0f3460" stroke-width="2" fill="none"/><path d="M8 18h32" stroke="#0f3460" stroke-width="2"/><circle cx="18" cy="28" r="3" fill="#e94560"/><rect x="26" y="26" width="10" height="4" rx="1" fill="#0f3460"/></svg></div>
-        <div class="role-title">System Administrator</div>
-        <div class="role-desc">Manage company IT infrastructure.</div>
-        <div class="role-section"><strong>Responsibilities:</strong> Maintain servers, manage networks, configure user accounts, backup data, troubleshoot hardware &amp; software.</div>
-        <div class="role-tags"><span>Servers</span><span>Networks</span></div>
-      </div>
-
-      <div class="role-card fade-in">
-        <img class="role-media" src="data analytics 2.webp" alt="Data analysis dashboard" loading="lazy">
-        <div class="role-icon"><svg viewBox="0 0 48 48"><path d="M8 34l10-10 8 6 14-16" stroke="#0f3460" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="38" cy="14" r="4" fill="#e94560"/></svg></div>
-        <div class="role-title">Data Analyst</div>
-        <div class="role-desc">Turn data into useful business insights.</div>
-        <div class="role-section"><strong>Responsibilities:</strong> Collect &amp; clean data, create reports &amp; dashboards, analyze trends, support decision-making.</div>
-        <div class="role-section"><strong>Tools:</strong> Excel, SQL, Power BI, Tableau.</div>
-        <div class="role-tags"><span>SQL</span><span>Power BI</span><span>Tableau</span></div>
-      </div>
-
     </div>
+  </div>
+</section>
 
-    <div class="section-header fade-in" style="margin-top:60px">
-      <h3>Business &amp; Support Roles</h3>
-      <p>The strategists, coordinators, and client-facing professionals who drive growth.</p>
+<section id="expertise" class="section expertise-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Our Expertise</span>
+      <h2>What we deliver for our clients</h2>
+      <p>Every system we build is backed by disciplined engineering, security awareness, and a commitment to real business outcomes.</p>
     </div>
-    <div class="role-grid">
-
-      <div class="role-card fade-in">
-        <img class="role-media" src="data analytics 3.webp" alt="Project management dashboard" loading="lazy">
-        <div class="role-icon"><svg viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="32" rx="4" stroke="#0f3460" stroke-width="2" fill="none"/><path d="M16 16h16M16 22h10M16 28h12" stroke="#e94560" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <div class="role-title">Project Manager (PM)</div>
-        <div class="role-desc">Ensure projects are delivered on time and within budget.</div>
-        <div class="role-section"><strong>Responsibilities:</strong> Plan project schedules, coordinate teams, monitor progress, manage risks &amp; budgets, communicate with clients and stakeholders.</div>
+    <div class="expertise-grid">
+      <div class="expertise-card fade-in">
+        <div class="expertise-icon">
+          <svg viewBox="0 0 48 48"><path d="M12 36V12l12 12-12 12zM24 36V12l12 12-12 12z" fill="#0f3460" opacity=".12"/><circle cx="40" cy="8" r="6" fill="#e94560"/></svg>
+        </div>
+        <h3>We build secure, scalable software</h3>
+        <p>Custom applications, APIs, portals, and business systems that are maintainable, tested, and built to evolve with your needs.</p>
+        <div class="role-tags"><span>JavaScript</span><span>Python</span><span>Node.js</span><span>SQL</span></div>
       </div>
-
-      <div class="role-card fade-in">
-        <img class="role-media" src="data administrator.webp" alt="Business analysis data systems" loading="lazy">
-        <div class="role-icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16" stroke="#0f3460" stroke-width="2" fill="none"/><path d="M24 16v8l6 6" stroke="#e94560" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-        <div class="role-title">Business Analyst (BA)</div>
-        <div class="role-desc">Connect business needs with technical solutions.</div>
-        <div class="role-section"><strong>Responsibilities:</strong> Gather client requirements, analyze business processes, create project documentation, support testing &amp; implementation, recommend improvements.</div>
+      <div class="expertise-card fade-in">
+        <div class="expertise-icon">
+          <svg viewBox="0 0 48 48"><rect x="8" y="6" width="32" height="36" rx="4" stroke="#0f3460" stroke-width="2.5" fill="none"/><path d="M16 18h16M16 24h12M16 30h8" stroke="#e94560" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>We create interfaces users love</h3>
+        <p>Responsive, accessible, and efficient front-ends that work on any device and make complex tasks feel simple.</p>
+        <div class="role-tags"><span>HTML</span><span>CSS</span><span>React</span><span>UX</span></div>
       </div>
-
-      <div class="role-card fade-in">
-        <img class="role-media" src="System Administrator 2.webp" alt="Technical support workstation" loading="lazy">
-        <div class="role-icon"><svg viewBox="0 0 48 48"><rect x="12" y="10" width="24" height="28" rx="4" fill="#0f3460" opacity=".08"/><path d="M20 22l-4 4 4 4M28 22l4 4-4 4" stroke="#0f3460" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <div class="role-title">Technical Support / IT Support Officer</div>
-        <div class="role-desc">Help users solve technical problems.</div>
-        <div class="role-section"><strong>Responsibilities:</strong> Install software, resolve computer issues, assist employees and customers, maintain IT equipment.</div>
+      <div class="expertise-card fade-in">
+        <div class="expertise-icon">
+          <svg viewBox="0 0 48 48"><path d="M24 4C14 4 8 12 8 20s6 12 16 24c10-12 16-16 16-20S34 4 24 4z" stroke="#0f3460" stroke-width="2" fill="none"/><circle cx="24" cy="20" r="6" fill="#e94560"/></svg>
+        </div>
+        <h3>We protect digital infrastructure</h3>
+        <p>Security reviews, vulnerability assessments, access control, monitoring, and incident readiness for business-critical systems.</p>
+        <div class="role-tags"><span>Security</span><span>Risk</span><span>Hardening</span><span>Compliance</span></div>
       </div>
-
-      <div class="role-card fade-in">
-        <img class="role-media" src="DevSecOps Engineer 3.webp" alt="Sales technology platform" loading="lazy">
-        <div class="role-icon"><svg viewBox="0 0 48 48"><path d="M8 28c0-8 6-14 16-14s16 6 16 14-6 14-16 14S8 36 8 28z" fill="#0f3460" opacity=".08"/><path d="M20 24l4 4 8-8" stroke="#e94560" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="role-title">Sales and Marketing Executive</div>
-        <div class="role-desc">Find customers and promote company products.</div>
-        <div class="role-section"><strong>Responsibilities:</strong> Generate leads, present products to clients, manage marketing campaigns, increase revenue.</div>
+      <div class="expertise-card fade-in">
+        <div class="expertise-icon">
+          <svg viewBox="0 0 48 48"><path d="M8 34l10-10 8 6 14-16" stroke="#0f3460" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="38" cy="14" r="4" fill="#e94560"/></svg>
+        </div>
+        <h3>We turn data into decisions</h3>
+        <p>Dashboards, reports, data cleanup, and analytics tools that make business performance visible and actionable.</p>
+        <div class="role-tags"><span>SQL</span><span>Power BI</span><span>Tableau</span><span>Analytics</span></div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="role-card fade-in">
-        <img class="role-media" src="Cybersecurity Analyst 2.webp" alt="Customer success secure product support" loading="lazy">
-        <div class="role-icon"><svg viewBox="0 0 48 48"><path d="M24 8C16 8 10 14 10 22v6l-4 6h36l-4-6v-6c0-8-6-14-14-14z" stroke="#0f3460" stroke-width="2" fill="none"/><path d="M20 34c0 2.2 1.8 4 4 4s4-1.8 4-4" stroke="#e94560" stroke-width="2"/></svg></div>
-        <div class="role-title">Customer Success Officer</div>
-        <div class="role-desc">Ensure customers get value from the company's products.</div>
-        <div class="role-section"><strong>Responsibilities:</strong> Train clients, resolve customer concerns, monitor satisfaction, retain customers.</div>
+<section id="process" class="section process-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">How We Work</span>
+      <h2>A clear delivery process from idea to support</h2>
+      <p>Professional delivery comes from predictable steps, honest scope control, and continuous communication.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step fade-in">
+        <span>01</span>
+        <h3>Discover</h3>
+        <p>Understand goals, users, risks, budget, and the business workflow behind the project.</p>
       </div>
-
+      <div class="process-step fade-in">
+        <span>02</span>
+        <h3>Design</h3>
+        <p>Map the user journey, data model, architecture, interface direction, and delivery milestones.</p>
+      </div>
+      <div class="process-step fade-in">
+        <span>03</span>
+        <h3>Build</h3>
+        <p>Develop in focused iterations with testing, reviews, deployment planning, and stakeholder demos.</p>
+      </div>
+      <div class="process-step fade-in">
+        <span>04</span>
+        <h3>Support</h3>
+        <p>Launch with monitoring, documentation, training, fixes, and a plan for continuous improvement.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -269,9 +507,9 @@
   <div class="container">
     <div class="contact-grid">
       <div class="contact-info fade-in">
-        <span class="section-tag light">Get in Touch</span>
-        <h3>Let's Build Something Great Together</h3>
-        <p>Whether you're looking for a tech partner or your next career move, we'd love to hear from you.</p>
+        <span class="section-tag light">Start the Conversation</span>
+        <h2>Tell us what you want to build, improve, or secure</h2>
+        <p>Share the goal, timeline, and type of support you need. We will respond with a practical next step.</p>
         <div class="contact-details">
           <div class="contact-item">
             <div class="contact-icon">
@@ -302,16 +540,49 @@
               <span>Nairobi, Kenya</span>
             </div>
           </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#e94560"><path d="M3.5 2C2.67 2 2 2.67 2 3.5v4.17C2 8.5 2.67 9 3.5 9c.83 0 1.5-.5 1.5-1.33V6h2V4H5V3.5C5 2.67 4.33 2 3.5 2zm12 0c-.83 0-1.5.67-1.5 1.5V4h-2v2h2v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V3.5c0-.83-.67-1.5-1.5-1.5zM12 6c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 2.22 0 4.15-1.21 5.16-3H11.5V9h1.5v4h3.09c.2-.64.41-1.28.41-2 0-3.31-2.69-6-6-6zm-6.5 8.5c-.83 0-1.5.67-1.5 1.5v4.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V16c0-.83-.67-1.5-1.5-1.5zm13 0c-.83 0-1.5.67-1.5 1.5v4.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V16c0-.83-.67-1.5-1.5-1.5z"/></svg>
+            </div>
+            <div>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/254704300972" target="_blank" rel="noopener">+254 704 300 972</a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="contact-form fade-in">
         <form id="contactForm">
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <input type="text" placeholder="Subject">
-          <textarea rows="4" placeholder="Your Message" required></textarea>
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+          </div>
+          <input type="tel" name="phone" placeholder="Phone or WhatsApp">
+          <select name="service" required>
+            <option value="">Service Needed *</option>
+            <option>Website or Web App</option>
+            <option>Mobile Application</option>
+            <option>Business System</option>
+            <option>Cybersecurity Review</option>
+            <option>Data Analytics</option>
+            <option>Cloud or DevOps</option>
+            <option>IT Support</option>
+            <option>Other</option>
+          </select>
+          <div class="form-row">
+            <select name="budget">
+              <option value="">Budget Range</option>
+              <option>Below KES 50,000</option>
+              <option>KES 50,000 – 150,000</option>
+              <option>KES 150,000 – 500,000</option>
+              <option>KES 500,000 – 2,000,000</option>
+              <option>Above KES 2,000,000</option>
+            </select>
+            <input type="text" name="timeline" placeholder="Project Timeline (e.g. 3 months)">
+          </div>
+          <textarea rows="5" name="message" placeholder="Describe the project or problem you need solved" required></textarea>
           <button type="submit" class="btn btn-primary btn-block">
-            Send Message
+            Send Project Request
             <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
           </button>
         </form>
@@ -328,23 +599,26 @@
           <img class="logo-mark footer-logo-mark" src="logo.png" alt="Ornest Developers logo">
           Ornest Developers
         </div>
-        <p style="color:#888;margin-top:8px;font-size:0.9rem">Building Kenya's digital future, one line of code at a time.</p>
+        <p style="color:#888;margin-top:8px;font-size:0.9rem">Secure software, cloud, and data solutions built in Kenya for ambitious African businesses.</p>
       </div>
       <div>
-        <h4>Quick Links</h4>
+        <h4>Company</h4>
+        <a href="#services">Services</a>
+        <a href="#industries">Industries</a>
+        <a href="#work">Case Studies</a>
         <a href="#about">About</a>
-        <a href="#roles">Roles</a>
-        <a href="#contact">Contact</a>
+        <a href="#why-choose">Why Us</a>
       </div>
       <div>
         <h4>Contact</h4>
         <a href="tel:+254704300972">+254 704 300 972</a>
         <a href="tel:+254742942435">+254 742 942 435</a>
         <a href="mailto:nyootitom@gmail.com">nyootitom@gmail.com</a>
+        <a href="https://wa.me/254704300972" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Ornest Developers. Built in Kenya, for the world.</p>
+      <p>&copy; 2026 Ornest Developers. Built in Kenya, for ambitious teams.</p>
     </div>
   </div>
 </footer>
