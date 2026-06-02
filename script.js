@@ -190,21 +190,92 @@
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       var btn = form.querySelector('.btn');
+      var data = new FormData(form);
       btn.disabled = true;
       btn.innerHTML = '<span class="spinner"></span> Sending...';
-      setTimeout(function() {
-        btn.innerHTML = '✓ Message Sent!';
-        btn.style.background = '#22c55e';
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res) {
+        if (res.ok) {
+          btn.innerHTML = '✓ Message Sent!';
+          btn.style.background = '#22c55e';
+          form.reset();
+        } else {
+          throw new Error('Server error');
+        }
+      }).catch(function() {
+        btn.innerHTML = '✗ Failed to send';
+        btn.style.background = '#dc2626';
+      }).finally(function() {
         setTimeout(function() {
           btn.innerHTML = 'Send Message ' +
             '<svg width="18" height="18" viewBox="0 0 24 24" fill="#fff">' +
             '<path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>';
           btn.disabled = false;
           btn.style.background = '';
-          form.reset();
-        }, 2500);
-      }, 1500);
+        }, 3000);
+      });
     });
+  }
+
+  // ==================== MODALS ====================
+  function setupModals() {
+    document.querySelectorAll('[data-modal]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var modal = document.getElementById(this.getAttribute('data-modal'));
+        if (modal) modal.classList.add('active');
+      });
+    });
+    document.querySelectorAll('.modal-overlay').forEach(function(overlay) {
+      overlay.addEventListener('click', function(e) {
+        if (e.target === overlay || e.target.classList.contains('modal-close')) {
+          overlay.classList.remove('active');
+        }
+      });
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(function(m) {
+          m.classList.remove('active');
+        });
+      }
+    });
+  }
+
+  // ==================== SCROLL NAV ====================
+  function setupScrollNav() {
+    var links = document.querySelectorAll('nav a');
+    if (!links.length) return;
+    var sections = [];
+    links.forEach(function(a) {
+      var id = a.getAttribute('href');
+      if (id && id.charAt(0) === '#') {
+        var el = document.getElementById(id.substring(1));
+        if (el) sections.push({ id: id.substring(1), el: el, link: a });
+      }
+    });
+    if (!sections.length) return;
+    var observer = new IntersectionObserver(function() {
+      var scrollY = window.scrollY + 120;
+      var current = sections[0].id;
+      sections.forEach(function(s) {
+        var top = s.el.offsetTop;
+        var bottom = top + s.el.offsetHeight;
+        if (scrollY >= top && scrollY < bottom) current = s.id;
+      });
+      sections.forEach(function(s) {
+        s.link.classList.toggle('active', s.id === current);
+      });
+    }, { threshold: 0, rootMargin: '-120px 0px -60% 0px' });
+    sections.forEach(function(s) { observer.observe(s.el); });
+  }
+
+  // ==================== DYNAMIC YEAR ====================
+  function setYear() {
+    var el = document.getElementById('year');
+    if (el) el.textContent = new Date().getFullYear();
   }
 
   // ==================== INIT ====================
@@ -216,6 +287,9 @@
     animateCounters();
     setupMobileMenu();
     setupForm();
+    setupModals();
+    setupScrollNav();
+    setYear();
   });
 
 })();
