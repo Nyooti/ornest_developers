@@ -125,6 +125,47 @@
     }, 5200);
   }
 
+  // ==================== ABOUT CAROUSEL ====================
+  function setupAboutCarousel() {
+    var carousel = document.getElementById('aboutCarousel');
+    if (!carousel) return;
+    var slides = carousel.querySelectorAll('.about-slide');
+    var dotsContainer = document.getElementById('aboutDots');
+    if (slides.length < 2) return;
+
+    slides.forEach(function(_, i) {
+      var dot = document.createElement('span');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', function() { goTo(i); });
+      dotsContainer.appendChild(dot);
+    });
+
+    var index = 0;
+    var timer;
+
+    function goTo(i) {
+      if (i === index) return;
+      slides[index].classList.remove('active');
+      dotsContainer.children[index].classList.remove('active');
+      index = i;
+      slides[index].classList.add('active');
+      dotsContainer.children[index].classList.add('active');
+      resetTimer();
+    }
+
+    function next() { goTo((index + 1) % slides.length); }
+    function prev() { goTo((index - 1 + slides.length) % slides.length); }
+
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(next, 4500);
+    }
+
+    carousel.querySelector('.about-carousel-next').addEventListener('click', next);
+    carousel.querySelector('.about-carousel-prev').addEventListener('click', prev);
+    timer = setInterval(next, 4500);
+  }
+
   // ==================== SCROLL REVEAL ====================
   function observeFadeIn() {
     var els = document.querySelectorAll('.fade-in');
@@ -282,6 +323,7 @@
   document.addEventListener('DOMContentLoaded', function() {
     try { createParticles(); } catch(e) { /* canvas not supported */ }
     setupHeroCarousel();
+    setupAboutCarousel();
     startTyping();
     observeFadeIn();
     animateCounters();
