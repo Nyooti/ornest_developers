@@ -409,33 +409,35 @@ nav a:hover::after { width: 100%; }
   transform: scale(1.08);
 }
 .about-slide[data-effect="fade-scale"].active {
+  opacity: 1;
   transform: scale(1);
+}
+
+.about-slide[data-effect="slide-up"] {
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(40px);
+}
+.about-slide[data-effect="slide-up"].active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .about-slide[data-effect="slide-right"] {
-  transition: opacity 0.7s ease, clip-path 1s ease;
-  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  transition: opacity 0.85s ease, transform 0.85s ease;
+  transform: translateX(-50px);
 }
 .about-slide[data-effect="slide-right"].active {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.about-slide[data-effect="zoom-blur"] {
-  transition: opacity 0.8s ease, filter 1s ease, transform 1s ease;
-  filter: blur(8px);
-  transform: scale(0.85);
-}
-.about-slide[data-effect="zoom-blur"].active {
-  filter: blur(0);
-  transform: scale(1);
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .about-slide[data-effect="slide-left"] {
-  transition: opacity 0.8s ease, clip-path 0.9s ease;
-  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  transition: opacity 0.85s ease, transform 0.85s ease;
+  transform: translateX(50px);
 }
 .about-slide[data-effect="slide-left"].active {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .about-carousel-btn {
@@ -454,21 +456,29 @@ nav a:hover::after { width: 100%; }
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s, background 0.3s;
+  transition: background 0.3s;
   line-height: 1;
+  opacity: 0.75;
 }
 
-.about-carousel:hover .about-carousel-btn { opacity: 1; }
-
-@media (hover: none) {
-  .about-carousel-btn { opacity: 0.6; }
-}
-
-.about-carousel-btn:hover { background: #e94560; }
+.about-carousel-btn:hover { background: #e94560; opacity: 1; }
 
 .about-carousel-prev { left: 12px; }
 .about-carousel-next { right: 12px; }
+
+.about-carousel-counter {
+  position: absolute;
+  bottom: 12px;
+  right: 14px;
+  z-index: 2;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
 
 .about-carousel-dots {
   display: flex;

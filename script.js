@@ -131,7 +131,7 @@
     if (!carousel) return;
     var slides = carousel.querySelectorAll('.about-slide');
     var dotsContainer = document.getElementById('aboutDots');
-    if (slides.length < 2) return;
+    if (slides.length < 2 || !dotsContainer) return;
 
     slides.forEach(function(_, i) {
       var dot = document.createElement('span');
@@ -141,15 +141,26 @@
     });
 
     var index = 0;
+    var total = slides.length;
     var timer;
+    var counterEl = document.getElementById('aboutCounter');
+
+    function updateCounter() {
+      if (counterEl) counterEl.textContent = (index + 1) + ' / ' + total;
+    }
 
     function goTo(i) {
       if (i === index) return;
       slides[index].classList.remove('active');
-      dotsContainer.children[index].classList.remove('active');
+      if (dotsContainer.children[index]) {
+        dotsContainer.children[index].classList.remove('active');
+      }
       index = i;
       slides[index].classList.add('active');
-      dotsContainer.children[index].classList.add('active');
+      if (dotsContainer.children[index]) {
+        dotsContainer.children[index].classList.add('active');
+      }
+      updateCounter();
       resetTimer();
     }
 
@@ -158,12 +169,18 @@
 
     function resetTimer() {
       clearInterval(timer);
-      timer = setInterval(next, 4500);
+      timer = setInterval(next, 4000);
     }
 
-    carousel.querySelector('.about-carousel-next').addEventListener('click', next);
-    carousel.querySelector('.about-carousel-prev').addEventListener('click', prev);
-    timer = setInterval(next, 4500);
+    var nextBtn = carousel.querySelector('.about-carousel-next');
+    var prevBtn = carousel.querySelector('.about-carousel-prev');
+    if (nextBtn) nextBtn.addEventListener('click', next);
+    if (prevBtn) prevBtn.addEventListener('click', prev);
+
+    timer = setTimeout(function() {
+      next();
+      timer = setInterval(next, 4000);
+    }, 2000);
   }
 
   // ==================== SCROLL REVEAL ====================
