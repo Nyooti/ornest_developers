@@ -1235,6 +1235,7 @@ footer {
   .footer-grid { grid-template-columns: 1fr; }
 
   .section { padding: 60px 0; }
+}
 
 .modal-overlay {
   display: none;
@@ -1292,5 +1293,4 @@ footer {
   font-size: 0.8rem;
   color: #0f3460;
   margin: 3px 4px 3px 0;
-}
 }
