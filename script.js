@@ -131,9 +131,45 @@
     if (!carousel) return;
     var track = document.getElementById('aboutTrack');
     if (!track) return;
-    var slides = track.querySelectorAll('.about-slide');
     var dotsContainer = document.getElementById('aboutDots');
-    if (slides.length < 2 || !dotsContainer) return;
+    if (!dotsContainer) return;
+
+    // Dynamically append remaining slides so the initial HTML stays lean
+    var slideData = [
+      { src: 'image 2.webp', alt: 'Ornest Developers office workspace' },
+      { src: 'System Administrator 1.webp', alt: 'System administration and IT support team' },
+      { src: 'System Administrator 2.webp', alt: 'Server infrastructure management' },
+      { src: 'System Administrator 3.webp', alt: 'Network operations center' },
+      { src: 'data analytics 1.webp', alt: 'Data analytics and visualization dashboard' },
+      { src: 'data analytics 2.webp', alt: 'Data analytics insights and reporting' },
+      { src: 'data administrator.webp', alt: 'Data administration and database management' },
+      { src: 'software-development.webp', alt: 'Software development and coding' },
+      { src: 'web-development-laptop.webp', alt: 'Web development on laptop' },
+      { src: 'web 2.webp', alt: 'Web technology and digital solutions' },
+      { src: 'Cybersecurity Analyst 1.webp', alt: 'Cybersecurity analysis and protection' },
+      { src: 'Cybersecurity Analyst 2.webp', alt: 'Security monitoring and threat detection' },
+      { src: 'DevSecOps Engineer.webp', alt: 'DevSecOps engineering and deployment' },
+      { src: 'DevSecOps Engineer 3.webp', alt: 'Cloud infrastructure and automation' },
+      { src: 'DevSecOps Engineer 4.webp', alt: 'DevOps pipeline and CI/CD workflows' },
+      { src: 'DevSecOps Engineer 1.webp', alt: 'Secure software development lifecycle' },
+      { src: 'DevSecOps Engineer 2.webp', alt: 'Containerization and orchestration' },
+      { src: 'data analytics 3.webp', alt: 'Advanced data analytics modeling' },
+      { src: 'data analytics 4.webp', alt: 'Business intelligence dashboards' },
+      { src: 'Cybersecurity Analyst 3.webp', alt: 'Penetration testing and vulnerability assessment' },
+      { src: 'Cybersecurity Analyst 4.webp', alt: 'Security operations center' },
+      { src: 'Cybersecurity Analyst 5.webp', alt: 'Incident response and forensics' },
+      { src: 'web-development-word.webp', alt: 'Web development technologies and frameworks' }
+    ];
+    slideData.forEach(function(d) {
+      var img = document.createElement('img');
+      img.className = 'about-slide';
+      img.src = d.src;
+      img.alt = d.alt;
+      track.appendChild(img);
+    });
+
+    var slides = track.querySelectorAll('.about-slide');
+    if (slides.length < 2) return;
 
     slides.forEach(function(_, i) {
       var dot = document.createElement('span');
@@ -146,6 +182,7 @@
     var total = slides.length;
     var timer;
     var counterEl = document.getElementById('aboutCounter');
+    updateCounter();
 
     function updateCounter() {
       if (counterEl) counterEl.textContent = (index + 1) + ' / ' + total;
