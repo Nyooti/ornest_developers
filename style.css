@@ -389,55 +389,18 @@ nav a:hover::after { width: 100%; }
   box-shadow: 0 20px 60px rgba(0,0,0,0.12);
 }
 
-.about-slide {
-  position: absolute;
-  inset: 0;
+.about-carousel-track {
+  display: flex;
   width: 100%;
   height: 100%;
+  transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.about-slide {
+  min-width: 100%;
+  height: 100%;
   object-fit: cover;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.about-slide.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.about-slide[data-effect="fade-scale"] {
-  transition: opacity 0.9s ease, transform 0.9s ease;
-  transform: scale(1.08);
-}
-.about-slide[data-effect="fade-scale"].active {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.about-slide[data-effect="slide-up"] {
-  transition: opacity 0.8s ease, transform 0.8s ease;
-  transform: translateY(40px);
-}
-.about-slide[data-effect="slide-up"].active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.about-slide[data-effect="slide-right"] {
-  transition: opacity 0.85s ease, transform 0.85s ease;
-  transform: translateX(-50px);
-}
-.about-slide[data-effect="slide-right"].active {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.about-slide[data-effect="slide-left"] {
-  transition: opacity 0.85s ease, transform 0.85s ease;
-  transform: translateX(50px);
-}
-.about-slide[data-effect="slide-left"].active {
-  opacity: 1;
-  transform: translateX(0);
+  flex-shrink: 0;
 }
 
 .about-carousel-btn {

@@ -129,7 +129,9 @@
   function setupAboutCarousel() {
     var carousel = document.getElementById('aboutCarousel');
     if (!carousel) return;
-    var slides = carousel.querySelectorAll('.about-slide');
+    var track = document.getElementById('aboutTrack');
+    if (!track) return;
+    var slides = track.querySelectorAll('.about-slide');
     var dotsContainer = document.getElementById('aboutDots');
     if (slides.length < 2 || !dotsContainer) return;
 
@@ -151,21 +153,18 @@
 
     function goTo(i) {
       if (i === index) return;
-      slides[index].classList.remove('active');
-      if (dotsContainer.children[index]) {
-        dotsContainer.children[index].classList.remove('active');
-      }
       index = i;
-      slides[index].classList.add('active');
-      if (dotsContainer.children[index]) {
-        dotsContainer.children[index].classList.add('active');
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      var dots = dotsContainer.children;
+      for (var d = 0; d < dots.length; d++) {
+        dots[d].classList.toggle('active', d === index);
       }
       updateCounter();
       resetTimer();
     }
 
-    function next() { goTo((index + 1) % slides.length); }
-    function prev() { goTo((index - 1 + slides.length) % slides.length); }
+    function next() { goTo((index + 1) % total); }
+    function prev() { goTo((index - 1 + total) % total); }
 
     function resetTimer() {
       clearInterval(timer);
@@ -180,7 +179,7 @@
     timer = setTimeout(function() {
       next();
       timer = setInterval(next, 4000);
-    }, 2000);
+    }, 3000);
   }
 
   // ==================== SCROLL REVEAL ====================
