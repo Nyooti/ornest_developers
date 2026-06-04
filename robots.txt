@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nyooti.github.io/ornest_developers/sitemap.xml
+Sitemap: https://nyooti.github.io/lake-region-tech-solutions/sitemap.xml

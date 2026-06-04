@@ -1,8 +1,8 @@
-# Ornest Developers
+# Lake Region Tech Solutions
 
 **Secure software, cloud, and data solutions built in Kenya.**
 
-Ornest Developers is a fast-growing Kenyan technology company delivering custom software, websites, cybersecurity, DevOps, data analytics, and IT support for ambitious businesses across Africa.
+Lake Region Tech Solutions is a fast-growing Kenyan technology company delivering custom software, websites, cybersecurity, DevOps, data analytics, and IT support for ambitious businesses across Africa.
 
 ## Services
 
@@ -31,7 +31,7 @@ JavaScript, Python, Node.js, React, SQL, Docker, Power BI, Tableau, and more.
 
 This site is deployed via GitHub Pages.
 
-- Production: `https://nyooti.github.io/ornest_developers/`
+- Production: `https://nyooti.github.io/lake-region-tech-solutions/`
 - Custom domain: TBD
 
 ## Local Development
@@ -44,4 +44,4 @@ Then open `http://localhost:3000`.
 
 ## License
 
-All rights reserved. Ornest Developers &copy; 2026.
+All rights reserved. Lake Region Tech Solutions &copy; 2026.
